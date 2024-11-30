@@ -1,0 +1,83 @@
+.navbar {
+  background: linear-gradient(135deg, #4ade80, #1e293b);
+  padding: 1.2rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  transform: translateY(-5px);
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #22d3ee;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-right: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: color 0.3s, background 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #22d3ee;
+  color: #1e293b;
+}
+
+.navbar-toggler-icon {
+  background: linear-gradient(135deg, #22d3ee, #4ade80);
+  border-radius: 12px;
+  padding: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.navbar-toggler-icon:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #4ade80, #22d3ee);
+}
+
+.dropdown-menu {
+  background: #1e293b;
+  border: 2px solid #4ade80;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.dropdown-item {
+  color: #e2e8f0;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #22d3ee;
+  color: #1e293b;
+  transform: translateX(5px);
+}
+
+.badge {
+  font-size: 0.9rem;
+  background: #22d3ee;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+}

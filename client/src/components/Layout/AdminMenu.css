@@ -1,0 +1,59 @@
+.dashboard-menu {
+  max-width: 400px; /* Increased for a spacious layout */
+  margin: 30px auto;
+  border-radius: 15px; /* Softer corners */
+  background-color: #f9f9f9; /* Subtle light gray */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  overflow: hidden;
+  border: 1px solid #d4d4d4;
+}
+
+.dashboard-menu h4 {
+  background: linear-gradient(135deg, #4a90e2, #1e73be); /* Gradient background */
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  font-size: 2rem; /* Larger font */
+  text-align: center;
+  font-weight: 600; /* Slightly lighter font weight */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Added letter spacing */
+}
+
+.dashboard-menu .list-group-item {
+  font-size: 1.1rem; /* Slightly larger text */
+  color: #444; /* Darker text for contrast */
+  padding: 18px 25px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.dashboard-menu .list-group-item:hover {
+  background-color: #d0ebff; /* Softer hover background */
+  transform: translateX(8px); /* More noticeable movement */
+  font-weight: 600; /* Slightly bold on hover */
+  border-radius: 10px; /* Subtle rounding on hover */
+}
+
+.dashboard-menu .list-group-item.active {
+  background: linear-gradient(135deg, #1e73be, #4a90e2) !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.dashboard-menu .list-group-item:not(:last-child) {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.dashboard-menu .list-group-item .icon {
+  font-size: 1.5rem; /* Larger icons */
+  color: #1e73be;
+  transition: color 0.3s ease;
+}
+
+.dashboard-menu .list-group-item:hover .icon {
+  color: #004080; /* Darker blue for hover */
+}

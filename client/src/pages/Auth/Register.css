@@ -1,0 +1,170 @@
+/* General Styling */
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.register-left {
+  flex: 1;
+  max-width: 500px;
+  background: linear-gradient(135deg, #66a6ff, #89f7fe);
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(102, 166, 255, 0.4);
+}
+
+.register-left img {
+  max-width: 70%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #eef5ff;
+}
+
+/* Right Section */
+.register-right {
+  flex: 1;
+  max-width: 600px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+.register-form-container {
+  width: 100%;
+  margin: auto;
+}
+
+.form-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #66a6ff;
+  box-shadow: 0 0 8px rgba(102, 166, 255, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #66a6ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5597e6;
+  transform: translateY(-2px);
+}
+
+/* Links */
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-link a {
+  color: #66a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #5597e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-page {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 20px;
+  }
+
+  .register-left,
+  .register-right {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: none;
+      padding: 20px;
+  }
+
+  .register-left img {
+      max-width: 100%;
+  }
+
+  .form-title {
+      font-size: 20px;
+  }
+
+  .welcome-message {
+      font-size: 20px;
+  }
+
+  .description {
+      font-size: 14px;
+  }
+}
+
