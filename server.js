@@ -1,5 +1,4 @@
 import express from "express";
-
 import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
@@ -8,46 +7,46 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import path from "path";
-import {fileURLToPath } from 'url';
-//configure env
+import { fileURLToPath } from "url";
+
+// Configure environment variables
 dotenv.config();
 
-//databse config
+// Database connection
 connectDB();
 
+// Handle __dirname issue in ES Modules (use fileURLToPath)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const __filename =fileURLToPath(import.meta.url);
-const __dirname=path.dirname(__filename);
-//rest object
+// Initialize the Express app
 const app = express();
 
-
-// Middlewares
+// Middleware
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
   credentials: true
 }));
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname,'./client/build')))
 
-//routes
+// Serve static files from the React build folder
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+// API Routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
-//rest api
-app.use('*',function(req,res){
-  res.sendFile(path.join(__dirname,'./client/build/index.html'));
-})
+// Serve React's index.html for all other routes (front-end routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
-//PORT
+// Set up the port
 const PORT = process.env.PORT || 8080;
 
-//run listen
+// Start the server
 app.listen(PORT, () => {
-  console.log(
-    `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
-      .white
-  );
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
